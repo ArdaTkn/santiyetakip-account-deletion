@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Şantiye Takip - Hesap Silme</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #23255A 0%, #6C3EFF 50%, #181C3A 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            color: white;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .content-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        
+        .warning-box {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .warning-box h3 {
+            color: #856404;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .steps-section h2 {
+            color: #512DA8;
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+        }
+        
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            border-left: 4px solid #6C3EFF;
+        }
+        
+        .step-number {
+            background: #6C3EFF;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+        
+        .step-content h3 {
+            color: #512DA8;
+            margin-bottom: 8px;
+        }
+        
+        .step-content p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .contact-section {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+        }
+        
+        .contact-section h3 {
+            color: #512DA8;
+            margin-bottom: 15px;
+        }
+        
+        .email-button {
+            display: inline-block;
+            background: #6C3EFF;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 15px;
+        }
+        
+        .email-button:hover {
+            background: #5a2fd8;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(108, 62, 255, 0.3);
+        }
+        
+        .data-info {
+            background: #e3f2fd;
+            border: 1px solid #bbdefb;
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        
+        .data-info h4 {
+            color: #1976d2;
+            margin-bottom: 15px;
+        }
+        
+        .data-info ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .data-info li {
+            padding: 8px 0;
+            border-bottom: 1px solid #e1f5fe;
+        }
+        
+        .data-info li:last-child {
+            border-bottom: none;
+        }
+        
+        .data-info li:before {
+            content: "• ";
+            color: #1976d2;
+            font-weight: bold;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 15px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .content-card {
+                padding: 25px;
+            }
+            
+            .step {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .step-number {
+                margin: 0 auto 15px auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Şantiye Takip</h1>
+            <p>Hesap Silme ve Veri Yönetimi</p>
+        </div>
+        
+        <div class="content-card">
+            <div class="warning-box">
+                <h3>
+                    <span style="font-size: 24px;">⚠️</span>
+                    Önemli Bilgi
+                </h3>
+                <p>Bu sayfa, Şantiye Takip mobil uygulamasındaki hesabınızı ve ilişkili verilerinizi kalıcı olarak silmek için kullanılır. Bu işlem geri alınamaz.</p>
+            </div>
+            
+            <div class="steps-section">
+                <h2>Hesap Silme Adımları</h2>
+                
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>E-posta Gönderimi</h3>
+                        <p>Hesap silme talebinizi aşağıdaki e-posta adresine gönderin. E-postanızda kullanıcı bilgilerinizi ve silme talebinizi belirtin.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Doğrulama</h3>
+                        <p>E-posta adresinizi doğrulayın ve hesap silme talebinizi onaylayın. Güvenlik için ek doğrulama adımları gerekebilir.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>İşlem Tamamlama</h3>
+                        <p>Doğrulama tamamlandıktan sonra hesabınız ve tüm verileriniz 30 gün içinde kalıcı olarak silinecektir.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-section">
+                <h3>Hesap Silme Talebi Gönderin</h3>
+                <p>Hesabınızı silmek için aşağıdaki e-posta adresine talebinizi gönderin:</p>
+                <a href="mailto:info@goldenr.com?subject=Hesap Silme Talebi&body=Merhaba,%0D%0A%0D%0AŞantiye Takip uygulamasındaki hesabımın silinmesini talep ediyorum.%0D%0A%0D%0AKullanıcı Bilgileri:%0D%0A- E-posta: [E-posta adresinizi yazın]%0D%0A- Kullanıcı ID: [Varsa kullanıcı ID'nizi yazın]%0D%0A%0D%0AHesabımın ve tüm verilerimin kalıcı olarak silinmesini onaylıyorum.%0D%0A%0D%0ASaygılarımla,%0D%0A[Adınız Soyadınız]" class="email-button">
+                    📧 info@goldenr.com
+                </a>
+            </div>
+            
+            <div class="data-info">
+                <h4>Silinecek Veri Türleri</h4>
+                <ul>
+                    <li>Kullanıcı hesap bilgileri (ad, soyad, e-posta)</li>
+                    <li>Şantiye ve proje verileri</li>
+                    <li>Malzeme takip kayıtları</li>
+                    <li>Finansal kayıtlar ve belgeler</li>
+                    <li>Görev ve alt görev bilgileri</li>
+                    <li>Şantiye günlüğü kayıtları</li>
+                    <li>Yüklenen dosya ve görseller</li>
+                </ul>
+                
+                <h4 style="margin-top: 20px;">Veri Saklama Süresi</h4>
+                <p>Hesap silme talebiniz onaylandıktan sonra, verileriniz 30 gün boyunca yedek amaçla saklanır ve ardından kalıcı olarak silinir. Bu süre, yanlışlıkla silinen verilerin geri alınabilmesi için gereklidir.</p>
+            </div>
+        </div>
+        
+        <div class="content-card">
+            <h2 style="color: #512DA8; margin-bottom: 20px;">Alternatif İletişim Yöntemleri</h2>
+            <p>E-posta gönderemiyorsanız, aşağıdaki alternatif yöntemlerle de iletişime geçebilirsiniz:</p>
+            
+            <div style="margin-top: 20px;">
+                <h4 style="color: #512DA8;">Uygulama İçi Destek</h4>
+                <p>Şantiye Takip uygulamasının Ayarlar bölümünden "Hesabı Sil" seçeneğini kullanarak da hesap silme talebinde bulunabilirsiniz.</p>
+            </div>
+            
+            <div style="margin-top: 20px;">
+                <h4 style="color: #512DA8;">Geliştirici İletişim</h4>
+                <p>Teknik sorunlar yaşıyorsanız: <strong>info@goldenr.com</strong></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
